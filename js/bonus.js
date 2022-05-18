@@ -4,12 +4,17 @@ if (isNaN(eta) || (eta === "")) {
     nonValido.innerHTML = `<span style="color:red">I dati inseriti non sono validi!</span>`
 }
 
-numKm = Math.min(20)
-numKm = Math.max(300)
+if ((isNaN(km)) || (km === "")) {
+    alert("Devi inserire un numero valido!")
+    let nonValido = document.getElementById("km-passeggero")
+    nonValido.innerHTML = `<span style="color:red">I dati inseriti non sono validi!</span>`
+}
 
-
-
-
+if ((numKm <= 20) || (numKm >= 300)) {
+    alert("Il numero di km inserito non è valido!")
+    let nonValido = document.getElementById("km-passeggero")
+    nonValido.innerHTML = `<span style="color:red">I dati inseriti non sono validi!</span>`
+}
 
 
 /*
