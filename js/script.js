@@ -18,17 +18,17 @@ console.log (km, eta, prezzoBiglietto)
 
 if (etaPasseggero < 18) {
     prezzoMinori
-    console.log (prezzoMinori)
+    console.log (prezzoGenerico, prezzoMinori)
     let prezzoFinale = document.getElementById("prezzo-finale")
     prezzoFinale.innerHTML = (`Il biglietto scontato al 20% ha un costo di € ${prezzoMinori}`)
 } else if (etaPasseggero > 65) {
     prezzoOver
-    console.log (prezzoOver)
+    console.log (prezzoGenerico, prezzoOver)
     let prezzoFinale = document.getElementById("prezzo-finale")
     prezzoFinale.innerHTML = (`Il biglietto scontato al 40% ha un costo di € ${prezzoOver}`)   
 } else {
     prezzoGenerico
-    console.log (prezzoGenerico)
+    console.log (prezzoBiglietto, prezzoGenerico)
     let prezzoFinale = document.getElementById("prezzo-finale")
     prezzoFinale.innerHTML = (`Il biglietto ha un costo di € ${prezzoGenerico}`)  
 }
