@@ -1,15 +1,16 @@
 "use strict"
 
-const km = prompt('Quanti chilometri devi percorrere?')
-const numKm = parseInt(km)
-const eta = prompt('Quanti anni ha il passeggero?')
-const etaPasseggero = parseInt(eta)
+let km = prompt('Quanti chilometri devi percorrere?')
+let numKm = parseInt(km)
+let eta = prompt('Quanti anni ha il passeggero?')
+let etaPasseggero = parseInt(eta)
 
 const prezzoBiglietto = km * 0.21
 const scontoVenti = (20 / 100) * prezzoBiglietto
 const scontoQuaranta = (40 / 100) * prezzoBiglietto
 const scontoMinori = prezzoBiglietto - scontoVenti
 const scontoOver = prezzoBiglietto - scontoQuaranta
+
 const prezzoMinori = scontoMinori.toFixed(2)
 const prezzoOver = scontoOver.toFixed(2)
 const prezzoGenerico = prezzoBiglietto.toFixed(2)
@@ -33,10 +34,10 @@ if (etaPasseggero < 18) {
     prezzoFinale.innerHTML = (`Il biglietto ha un costo di € ${prezzoGenerico}`)  
 }
 
-const etaVisualizzata = document.getElementById("eta-passeggero")
+let etaVisualizzata = document.getElementById("eta-passeggero")
 etaVisualizzata.innerHTML = (`Il passeggero ha ${etaPasseggero} anni.`)
 
-const kmVisualizzati = document.getElementById("km-passeggero")
+let kmVisualizzati = document.getElementById("km-passeggero")
 kmVisualizzati.innerHTML = (`Il passeggero percorre ${numKm} km.`)
 
 /*
