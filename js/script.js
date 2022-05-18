@@ -3,7 +3,7 @@
 const km = prompt('Quanti chilometri devi percorrere?')
 const numKm = parseInt(km)
 const eta = prompt('Quanti anni ha il passeggero?')
-let etaPasseggero = parseInt(eta)
+const etaPasseggero = parseInt(eta)
 
 const prezzoBiglietto = km * 0.21
 const scontoVenti = (20 / 100) * prezzoBiglietto
@@ -11,19 +11,31 @@ const scontoQuaranta = (40 / 100) * prezzoBiglietto
 const scontoMinori = prezzoBiglietto - scontoVenti
 const scontoOver = prezzoBiglietto - scontoQuaranta
 
+console.log (km, eta, prezzoBiglietto)
 
 if (etaPasseggero < 18) {
-    const scontoMinori = prezzoBiglietto - scontoVenti
+    scontoMinori
+    console.log (scontoMinori)
+    let prezzoFinale = document.getElementById("prezzo-finale")
+    prezzoFinale.innerHTML = (`Il biglietto scontato al 20% ha un costo di € ${scontoMinori}`)
 } else if (etaPasseggero > 65) {
-    const scontoOver = prezzoBiglietto - scontoQuaranta
+    scontoOver
+    console.log (scontoOver)
+    let prezzoFinale = document.getElementById("prezzo-finale")
+    prezzoFinale.innerHTML = (`Il biglietto scontato al 40% ha un costo di € ${scontoOver}`)   
+} else {
+    prezzoBiglietto
+    let prezzoFinale = document.getElementById("prezzo-finale")
+    prezzoFinale.innerHTML = (`Il biglietto ha un costo di € ${prezzoBiglietto}`)  
 }
 
 
 
-console.log (km, eta, prezzoBiglietto, scontoMinori, scontoOver)
+const etaVisualizzata = document.getElementById("eta-passeggero")
+etaVisualizzata.innerHTML = (`Il passeggero ha ${etaPasseggero} anni.`)
 
-
-
+const kmVisualizzati = document.getElementById("km-passeggero")
+kmVisualizzati.innerHTML = (`Il passeggero percorre ${numKm} km.`)
 
 /*
 Il programma dovrà chiedere all’utente il numero di chilometri che vuole percorrere e l’età del passeggero.
