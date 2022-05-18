@@ -10,26 +10,28 @@ const scontoVenti = (20 / 100) * prezzoBiglietto
 const scontoQuaranta = (40 / 100) * prezzoBiglietto
 const scontoMinori = prezzoBiglietto - scontoVenti
 const scontoOver = prezzoBiglietto - scontoQuaranta
+const prezzoMinori = scontoMinori.toFixed(2)
+const prezzoOver = scontoOver.toFixed(2)
+const prezzoGenerico = prezzoBiglietto.toFixed(2)
 
 console.log (km, eta, prezzoBiglietto)
 
 if (etaPasseggero < 18) {
-    scontoMinori
-    console.log (scontoMinori)
+    prezzoMinori
+    console.log (prezzoMinori)
     let prezzoFinale = document.getElementById("prezzo-finale")
-    prezzoFinale.innerHTML = (`Il biglietto scontato al 20% ha un costo di € ${scontoMinori}`)
+    prezzoFinale.innerHTML = (`Il biglietto scontato al 20% ha un costo di € ${prezzoMinori}`)
 } else if (etaPasseggero > 65) {
-    scontoOver
-    console.log (scontoOver)
+    prezzoOver
+    console.log (prezzoOver)
     let prezzoFinale = document.getElementById("prezzo-finale")
-    prezzoFinale.innerHTML = (`Il biglietto scontato al 40% ha un costo di € ${scontoOver}`)   
+    prezzoFinale.innerHTML = (`Il biglietto scontato al 40% ha un costo di € ${prezzoOver}`)   
 } else {
-    prezzoBiglietto
+    prezzoGenerico
+    console.log (prezzoGenerico)
     let prezzoFinale = document.getElementById("prezzo-finale")
-    prezzoFinale.innerHTML = (`Il biglietto ha un costo di € ${prezzoBiglietto}`)  
+    prezzoFinale.innerHTML = (`Il biglietto ha un costo di € ${prezzoGenerico}`)  
 }
-
-
 
 const etaVisualizzata = document.getElementById("eta-passeggero")
 etaVisualizzata.innerHTML = (`Il passeggero ha ${etaPasseggero} anni.`)
