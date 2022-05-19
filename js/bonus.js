@@ -1,10 +1,10 @@
-if (isNaN(eta) || (eta === "")) {
+if (isNaN(etaPasseggero) || (eta === "")) {
     alert("Devi inserire un numero valido!")
     let nonValido = document.getElementById("eta-passeggero")
     nonValido.innerHTML = `<span style="color:red">I dati inseriti non sono validi!</span>`
 }
 
-if ((isNaN(km)) || (km === "")) {
+if ((isNaN(numKm)) || (km === "")) {
     alert("Devi inserire un numero valido!")
     let nonValido = document.getElementById("km-passeggero")
     nonValido.innerHTML = `<span style="color:red">I dati inseriti non sono validi!</span>`
